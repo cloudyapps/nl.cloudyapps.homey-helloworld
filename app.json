@@ -1,0 +1,85 @@
+{
+    "id": "nl.cloudyapps.homey-helloworld",
+    "version": "1.0.0",
+    "name": {
+        "en": "Hello World!",
+        "nl": "Hallo wereld!"
+    },
+    "description": {
+        "en": "This is an example app for Homey",
+        "nl": "Dit is een voorbeeld app voor Homey"
+    },
+    "author": {
+        "name": "Emile Nijssen",
+        "email": "emile@athom.nl"
+    },
+    "dependencies": {
+        "socket.io": "^1.1.0"
+    },
+    "permissions": [
+        "homey:manager:speech-output"
+    ],
+    "speech": [
+        {
+            "id": "hello",
+            "importance": 0.6,
+            "synonyms": {
+                "en": [
+                    "hello",
+                    "hi",
+                    "hey"
+                ],
+                "nl": [
+                	"hallo",
+                	"hoi",
+                	"yo",
+                	"heey"
+                ]
+            }
+        },
+        {
+	        "id": "weather",
+	        "importance": 1,
+	        "synonyms": {
+	            "en": [ "weather" ],
+	            "nl": [ "weer" ]
+	        }
+	    },
+	    {
+	        "id": "today",
+	        "importance": 0.3,
+	        "synonyms": {
+	            "en": [ "today" ],
+	            "nl": [ "vandaag" ]
+	        }
+	    },
+	    {
+	        "id": "tomorrow",
+	        "importance": 0.3,
+	        "synonyms": {
+	            "en": [ "tomorrow" ],
+	            "nl": [ "morgen" ]
+	        }
+	    },
+	    {
+	        "id": "day_after_tomorrow",
+	        "importance": 0.3,
+	        "synonyms": {
+	            "en": [ "day after tomorrow", "today after tomorrow" ],
+	            "nl": [ "overmorgen", "de dag na morgen" ]
+	        }
+	    }
+	        
+    ],
+    "flow": {
+        "triggers": [
+            {
+                "method": "hello",
+                "title": {
+                    "en": "When `hello`",
+                    "nl": "Als `hallo`"
+                }
+            }
+        ]
+    }
+}
