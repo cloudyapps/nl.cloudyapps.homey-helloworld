@@ -1,2 +1,2 @@
-# nl.cloudyapps.homey.myfirstapp
+# nl.cloudyapps.homey-helloworld
 Test application
